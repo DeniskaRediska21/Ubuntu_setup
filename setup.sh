@@ -19,6 +19,7 @@ curl -fSsL https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x
 sudo apt install nvidia-driver-460 cuda-drivers-460
 
 sudo apt install python3.10
+sudo apt install python3.10-venv
 sudo apt install pip 
 
 cd .config/
