@@ -28,6 +28,9 @@ sudo apt install build-essential gcc dirmngr ca-certificates software-properties
 curl -fSsL https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x86_64/3bf863cc.pub | sudo gpg --dearmor | sudo tee /usr/share/keyrings/nvidia-drivers.gpg > /dev/null 2>&1
 sudo apt install nvidia-driver-460 cuda-drivers-460
 
+sudo apt install python3.10
+sudo apt install pip 
+
 sudo reboot
 
 
