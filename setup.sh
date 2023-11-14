@@ -1,26 +1,16 @@
+#!bin/bash
 sudo apt update
 sudo apt upgrade
 sudo apt install kakoune
 sudo apt install git
+sudo apt install xsel
 git config --global user.email "lenis@lenis"
 git config --global user.name "DeniskaRediska21"
 ssh-keygen -t ed25519 -C "lenis@lenis"
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_ed25519
 
-cd .config/
 
-mkdir kak
-cd kak
-git init -b main
-git remote add origin git@github.com:DeniskaRediska21/Kakoune-configuration.git
-git clone origin main
-cd ..
-
-mkdir tmux
-git init -b main
-git remote add origin git@github.com:DeniskaRediska21/Tmux_configuration.git
-git clone origin main
 
 cd
 
@@ -31,6 +21,21 @@ sudo apt install nvidia-driver-460 cuda-drivers-460
 sudo apt install python3.10
 sudo apt install pip 
 
+cd .config/
+mkdir kak
+cd kak
+git init -b main
+git remote add origin git@github.com:DeniskaRediska21/Kakoune-configuration.git
+git pull origin main
+cd autoload
+ln -s /usr/share/kak/autoload/ autoload
+cd ..
+cd ..
+
+mkdir tmux
+git init -b main
+git remote add origin git@github.com:DeniskaRediska21/Tmux_configuration.git
+git pull origin main
+
+
 sudo reboot
-
-
