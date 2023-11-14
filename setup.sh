@@ -14,13 +14,13 @@ mkdir kak
 cd kak
 git init -b main
 git remote add origin git@github.com:DeniskaRediska21/Kakoune-configuration.git
-git pull origin main
+git clone origin main
 cd ..
 
 mkdir tmux
 git init -b main
 git remote add origin git@github.com:DeniskaRediska21/Tmux_configuration.git
-git pull origin main
+git clone origin main
 
 cd
 
